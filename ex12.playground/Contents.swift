@@ -64,6 +64,7 @@ func printMyName3(_ name1: String, _ name2: String) {
 printMyName3("홍길동", "변사또")
 
 //매개변수이름에 별명(레이블)을 줄 수 있음
+/*
 func printMyName4(hero name1: String, actor name2: String) {
     print("name1: \(name1), name2: \(name2)")
 }
@@ -77,3 +78,17 @@ func printMyName5(name1: String, name2: String...) {
     }
 }
 printMyName5(name1: "홍길동", name2: "변사도", "춘향이", "이몽룡")
+*/
+
+func printMyName5(name1: String, name2: String...) -> [String] {
+    print("name1: \(name1), name2: \(name2)")
+//    for name in name2  {
+//        print( name )
+//    }
+    return name2
+}
+
+let names = printMyName5(name1: "홍길동", name2: "변사도", "춘향이", "이몽룡")
+if let chunhyangIndex = names.firstIndex(of: "춘향이") { // 첫번째 인자부터 찾기
+    print("춘향이만 출력 : "+names[chunhyangIndex])
+}
