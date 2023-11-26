@@ -34,7 +34,7 @@ switch result {
     case ComparisonResult.orderedSame:
         print("같음")
     case ComparisonResult.orderedAscending:
-        print("같이 큼")
+        print("값이 큼")
     case ComparisonResult.orderedDescending:
         print("값이 작음")
     default:
